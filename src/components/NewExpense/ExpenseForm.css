@@ -6,36 +6,21 @@
   text-align: left;
 }
 
-/* div.label {
+.new-expense__control label {
   font-weight: bold;
   margin-bottom: 0.5rem;
   display: block;
 }
 
-div.input {
+.new-expense__control input {
   font: inherit;
   padding: 0.5rem;
   border-radius: 6px;
   border: 1px solid #ccc;
   width: 20rem;
   max-width: 100%;
-} */
+}
 
 .new-expense__actions {
   text-align: right;
-}
-
-.label {
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  display: block;
-}
-
-.input {
-  font: inherit;
-  padding: 0.5rem;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  width: 20rem;
-  max-width: 100%;
 }
