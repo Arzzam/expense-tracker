@@ -4,6 +4,7 @@ import ExpenseItem from "./ExpenseItem";
 import Card from "../UI/Card";
 import ExpensesFilter from "./ExpensesFilter";
 import "./Expenses.css";
+import ExpensesChart from "./ExpensesChart";
 
 function Expenses(props) {
   const [filteredYear, setFilteredYear] = useState("2022");
@@ -16,7 +17,7 @@ function Expenses(props) {
     return expense.date.getFullYear().toString() === filteredYear;
   });
 
-  const para = <h2 className="expenses-list__p">No Expense Found.</h2>
+  const para = <h2 className="expenses-list__p">No Expense Found.</h2>;
 
   return (
     <div>
@@ -25,9 +26,10 @@ function Expenses(props) {
           selected={filteredYear}
           onChangeFilter={filterChangeHandler}
         />
+        <ExpensesChart expenses={filteredExpenses} />
         {filteredExpenses.length === 0 ? para : null}
         {filteredExpenses.map((expense) => (
-          <ExpenseItem 
+          <ExpenseItem
             key={expense.id}
             title={expense.title}
             amount={expense.amount}
