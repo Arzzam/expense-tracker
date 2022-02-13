@@ -44,9 +44,13 @@ function App() {
 
   return (
     <div>
-      <NewExpense onAddExpense={addExpenseHandler} />
-      <Expenses items={expenses} />
-      <Footer />
+      <div>
+        <NewExpense onAddExpense={addExpenseHandler} />
+        <Expenses items={expenses} />
+      </div>
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 }
